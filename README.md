@@ -1,34 +1,35 @@
 # Trilha-Java-Basico
 Exercicios realizados no curso da DIO
 
-# Código realizado para demonstração de um iPhone e suas funções.
+## Código Realizado para Demonstração de um iPhone e Suas Funções
 
-## Diagrama de Classes
+### Diagrama de Classes
 
-![Diagrama UML](\mermaid-diagram-2024-08-15-093408.png")
-### Descrição das Classes
-
-- **ReprodutorMusical**
-  - `+tocar()`
-  - `+pausar()`
-  - `+selecionarMusica(String musica)`
-
-- **AparelhoTelefonico**
-  - `+atender()`
-  - `+iniciarCorreioVoz()`
-  - `+ligar(String numero)`
-
-- **NavegadorInternet**
-  - `+adicionarNovaAba()`
-  - `+atualizarPagina()`
-  - `+exibirPagina(String url)`
-
-- **iPhone**
-  - `+String musica`
-  - `+String numero`
-  - `+String url`
-
-Relacionamentos:
-- `iPhone --> ReprodutorMusical`
-- `iPhone --> AparelhoTelefonico`
-- `iPhone --> NavegadorInternet`
+```plaintext
+    +-----------------------+
+    |   ReprodutorMusical   |
+    +-----------------------+
+    | +tocar()              |
+    | +pausar()             |
+    | +selecionarMusica()   |
+    +-----------------------+
+                ^
+                |
+                |
+    +-----------------------+
+    |      iPhone           |
+    +-----------------------+
+    | +String musica        |
+    | +String numero        |
+    | +String url           |
+    +-----------------------+
+        /        |       \
+       /         |        \
+      /          |         \
++------------------+    +-------------------+    +---------------------+
+| AparelhoTelefonico|    | NavegadorInternet |    |   ReprodutorMusical |
++-------------------+    +-------------------+    +---------------------+
+| +atender()        |    | +adicionarNovaAba()|    | +tocar()           |
+| +iniciarCorreioVoz() | | +atualizarPagina() |   | +pausar()          |
+| +ligar(String numero)| | +exibirPagina()   |    | +selecionarMusica()|
++---------------------+  +-------------------+    +---------------------+
