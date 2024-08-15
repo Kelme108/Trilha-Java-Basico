@@ -1,34 +1,8 @@
 # Trilha-Java-Basico
 Exercicios realizados no curso da DIO
 
-Abaixo segue Diagrama de Classe sobre o primeiro Iphone criado.
+# Código realizado para demonstração de um iPhone e suas funções.
 
-@startuml
-class ReprodutorMusical {
-    +tocar()
-    +pausar()
-    +selecionarMusica(String musica)
-}
+## Diagrama de Classes
 
-class AparelhoTelefonico {
-    +atender()
-    +iniciarCorreioVoz()
-    +ligar(String numero)
-}
-
-class NavegadorInternet {
-    +adicionarNovaAba()
-    +atualizarPagina()
-    +exibirPagina(String url)
-}
-
-class iPhone {
-    +String musica
-    +String numero
-    +String url
-}
-
-iPhone --> ReprodutorMusical
-iPhone --> AparelhoTelefonico
-iPhone --> NavegadorInternet
-@enduml
+![Diagrama UML](\mermaid-diagram-2024-08-15-093408.png")
